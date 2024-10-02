@@ -41,6 +41,10 @@ public class Community {
 		this.numInhabitants = numInhabitants;
 	}
 
+	public String toString() {
+		return "atriubutos" + "-" + name + "-" + numInhabitants;
+	}
+
 	public String getType() {
 		// TODO - implement Community.getType
 		throw new UnsupportedOperationException();

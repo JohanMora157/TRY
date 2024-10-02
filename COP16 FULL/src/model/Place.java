@@ -4,9 +4,7 @@ package model;
 public class Place {
 
 	private double economicResources;
-
 	private String photoPlace;
-	private date openingDate;
 	private String name;
 	private double area;
 	private String department;
@@ -16,28 +14,19 @@ public class Place {
 	 * @param photoPlace
 	 * @param openingDate
 	 * @param economicResources
-	 * @param openingDate
+	 * 
 	 * @param area
 	 * @param department
 	 * 
 	 */
-	public Place(String photoPlace, date openingDate, double economicResources, String name, String department,
+	public Place(String photoPlace, double economicResources, String name, String department,
 			double area) {
 
 		this.photoPlace = photoPlace;
-		this.openingDate = openingDate;
 		this.economicResources = economicResources;
 		this.name = name;
 		this.department = department;
 		this.area = area;
-	}
-
-	public date getOpeningDate() {
-		return openingDate;
-	}
-
-	public void setOpeningDate(date openingDate) {
-		this.openingDate = openingDate;
 	}
 
 	public String getPhotoPlace() {
@@ -98,6 +87,10 @@ public class Place {
 
 	public double getEconomicResources() {
 		return economicResources;
+	}
+
+	public String toString() {
+		return "atriubutos" + "-" + economicResources + "-" + name + "-" + department + "-" + area;
 	}
 
 }

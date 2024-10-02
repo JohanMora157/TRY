@@ -39,4 +39,7 @@ public class Representative {
 		this.phoneNumber = phoneNumber;
 	}
 
+	public String toString() {
+		return "atriubutos" + "-" + name + "-" + phoneNumber;
+	}
 }
