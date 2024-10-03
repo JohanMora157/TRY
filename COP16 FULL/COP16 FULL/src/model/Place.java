@@ -8,6 +8,8 @@ public class Place {
 	private String name;
 	private double area;
 	private String department;
+	private Specie[] species;
+	private Community communitie;
 
 	/**
 	 * 
@@ -27,6 +29,8 @@ public class Place {
 		this.name = name;
 		this.department = department;
 		this.area = area;
+		this.species = new Specie[50];
+
 	}
 
 	public String getPhotoPlace() {
@@ -90,7 +94,38 @@ public class Place {
 	}
 
 	public String toString() {
-		return "atriubutos" + "-" + economicResources + "-" + name + "-" + department + "-" + area;
+		return "atriubutos" + "-" + economicResources + "-" + name + "-" + department + "-" + area + "-" + photoPlace
+				+ "-" + species[0] + "-" + species[1];
+	}
+
+	public Specie[] getSpecies() {
+		return species;
+	}
+
+	public boolean addSpecies(Specie newSpecies) {
+
+		for (int i = 0; i < species.length; i++) {
+			if (species[i] == null) {
+				species[i] = newSpecies;
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public Community getCommunities() {
+		return communitie;
+	}
+
+	public boolean addCommunities(Community newCommunitie) {
+
+		if (communitie == null) {
+
+			communitie = newCommunitie;
+			return true;
+
+		}
+		return false;
 	}
 
 }

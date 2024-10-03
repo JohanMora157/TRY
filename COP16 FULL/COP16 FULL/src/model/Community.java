@@ -4,6 +4,7 @@ public class Community {
 
 	private String name;
 	private int numInhabitants;
+	private Representative representative;
 
 	/**
 	 * 
@@ -12,9 +13,10 @@ public class Community {
 	 * @param types
 	 * @param problems
 	 */
-	public Community(String name, int numInhabitants, String types, String problems) {
+	public Community(String name, int numInhabitants) {// , String types, String problems
 		this.name = name;
 		this.numInhabitants = numInhabitants;
+
 	}
 
 	public String getName() {
@@ -43,6 +45,21 @@ public class Community {
 
 	public String toString() {
 		return "atriubutos" + "-" + name + "-" + numInhabitants;
+	}
+
+	public Representative getRepresentative() {
+		return representative;
+	}
+
+	public boolean addRepresentative(Representative newRepresentative) {
+
+		if (representative == null) {
+			representative = newRepresentative;
+
+			return true;
+		}
+
+		return false;
 	}
 
 	public String getType() {

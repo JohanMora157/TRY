@@ -7,7 +7,7 @@ public class Route {
 	private double humidity;
 	private int numAttendants;
 	private int numGuides;
-	private int numBuses;
+ 
 
 	/**
 	 * 
@@ -16,16 +16,16 @@ public class Route {
 	 * @param humidity
 	 * @param numAttendats
 	 * @param numGuides
-	 * @param numBuses
+	 *  
 	 * 
 	 */
-	public Route(String name, double temperature, double humidity, int numAttendats, int numGuides, int numBuses) {
+	public Route(String name, double temperature, double humidity, int numAttendats, int numGuides) {
 		this.name = name;
 		this.temperature = temperature;
 		this.humidity = humidity;
 		this.numAttendants = numAttendats;
 		this.numGuides = numGuides;
-		this.numBuses = numBuses;
+	 
 
 	}
 
@@ -69,17 +69,40 @@ public class Route {
 		this.numGuides = numGuides;
 	}
 
-	public int getNumBuses() {
-		return numBuses;
-	}
-
-	public void setNumBuses(int numBuses) {
-		this.numBuses = numBuses;
-	}
+ 
 
 	public String toString() {
-		return "atriubutos" + "-" + name + "-" + temperature + "-" + humidity + "-" + numAttendants + "-" + numGuides
-				+ "-" + numBuses;
+		return "atriubutos" + "-" + name + "-" + numAttendants + "-" + numGuides
+				 ;
 	}
+
+	
+    public int calcular_buses() {
+        int totalBuses;
+		int totalPersonas = numAttendants+numGuides;
+
+        if (totalPersonas % 25 == 0) {
+
+            totalBuses = totalPersonas / 25;
+
+        } else {
+
+            totalBuses = 1 + (totalPersonas / 25);
+        }
+        return totalBuses;
+
+    }
+
+    public boolean calcular_clima() {
+
+        if ((temperature >= 20 && temperature <= 25) && (humidity <= 60 && humidity >= 40)) {
+            return true;
+
+        } else {
+            return false;
+
+        }
+
+    }
 
 }

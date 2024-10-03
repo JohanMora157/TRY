@@ -6,18 +6,21 @@ public class Specie {
 	private String name;
 	private int amount;
 	private String photoSpecie;
+	// private String types ;
+	// private String problems;
 
 	/**
 	 * 
 	 * @param name
 	 * @param photoSpecie
 	 * @param amount
-	 * @param typeSpecie
+	 * 
 	 */
-	public void Specie(String name, String photoSpecie, int amount, String typeSpecie) {
+	public Specie(String name, String photoSpecie, int amount) {
 		this.name = name;
 		this.photoSpecie = photoSpecie;
 		this.amount = amount;
+
 	}
 
 	public String getName() {
