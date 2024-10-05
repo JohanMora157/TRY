@@ -4,18 +4,15 @@ public class Community {
 
 	private String name;
 	private int numInhabitants;
+	private String type;
 	private Representative representative;
+	private String[] problemsCommunity;
 
-	/**
-	 * 
-	 * @param name
-	 * @param numInhabitants
-	 * @param types
-	 * @param problems
-	 */
-	public Community(String name, int numInhabitants) {// , String types, String problems
+	public Community(String name, int numInhabitants, String type) {// , String types, String problems
 		this.name = name;
 		this.numInhabitants = numInhabitants;
+		this.type = type;
+		this.problemsCommunity = new String[4];
 
 	}
 
@@ -23,22 +20,22 @@ public class Community {
 		return name;
 	}
 
-	/**
-	 * 
-	 * @param name
-	 */
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	public int getNumInhabitants() {
 		return numInhabitants;
 	}
 
-	/**
-	 * 
-	 * @param numInhabitants
-	 */
 	public void setNumInhabitants(int numInhabitants) {
 		this.numInhabitants = numInhabitants;
 	}
@@ -51,6 +48,14 @@ public class Community {
 		return representative;
 	}
 
+	public String[] getProblemsCommunity() {
+		return problemsCommunity;
+	}
+
+	public void setProblemsCommunity(String[] problemsCommunity) {
+		this.problemsCommunity = problemsCommunity;
+	}
+
 	public boolean addRepresentative(Representative newRepresentative) {
 
 		if (representative == null) {
@@ -60,16 +65,6 @@ public class Community {
 		}
 
 		return false;
-	}
-
-	public String getType() {
-		// TODO - implement Community.getType
-		throw new UnsupportedOperationException();
-	}
-
-	public String getProblem() {
-		// TODO - implement Community.getProblem
-		throw new UnsupportedOperationException();
 	}
 
 }

@@ -6,31 +6,28 @@ public class Specie {
 	private String name;
 	private int amount;
 	private String photoSpecie;
-	// private String types ;
-	// private String problems;
+	private String type;
 
-	/**
-	 * 
-	 * @param name
-	 * @param photoSpecie
-	 * @param amount
-	 * 
-	 */
-	public Specie(String name, String photoSpecie, int amount) {
+	public Specie(String name, String photoSpecie, int amount, String type) {
 		this.name = name;
 		this.photoSpecie = photoSpecie;
 		this.amount = amount;
+		this.type = type;
 
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	public String getName() {
 		return name;
 	}
 
-	/**
-	 * 
-	 * @param name
-	 */
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -39,10 +36,6 @@ public class Specie {
 		return amount;
 	}
 
-	/**
-	 * 
-	 * @param amount
-	 */
 	public void setAmount(int amount) {
 		this.amount = amount;
 	}
@@ -51,16 +44,12 @@ public class Specie {
 		return photoSpecie;
 	}
 
-	/**
-	 * 
-	 * @param photoSpecie
-	 */
 	public void setPhotoSpecie(String photoSpecie) {
 		this.photoSpecie = photoSpecie;
 	}
 
 	public String toString() {
-		return "atriubutos" + "-" + name + "-" + photoSpecie + "-" + amount;
+		return "atriubutos" + "-" + name + "-" + photoSpecie + "-" + amount + "-" + type;
 	}
 
 }

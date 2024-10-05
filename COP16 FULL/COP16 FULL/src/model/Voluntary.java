@@ -49,17 +49,4 @@ public class Voluntary {
 		return false;
 	}
 
-	/*
-	 * public Route shoewRoute(Route newRoute) {
-	 * 
-	 * /*for (int i = 0; i < routes.length; i++) {
-	 * if (routes[i] == null) {
-	 * routes[i] = newRoute;
-	 * return true;
-	 * }
-	 * }
-	 * return false;}
-	 * return routes[0];
-	 */
-
 }

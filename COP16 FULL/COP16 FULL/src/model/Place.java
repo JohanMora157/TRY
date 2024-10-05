@@ -11,16 +11,28 @@ public class Place {
 	private Specie[] species;
 	private Community communitie;
 
-	/**
-	 * 
-	 * @param photoPlace
-	 * @param openingDate
-	 * @param economicResources
-	 * 
-	 * @param area
-	 * @param department
-	 * 
-	 */
+	public boolean checkSpecie() {
+
+		if (species[0] == null) {
+			return false;
+
+		} else {
+			return true;
+		}
+
+	}
+
+	public boolean checkCommunity() {
+
+		if (communitie == null) {
+			return false;
+
+		} else {
+			return true;
+		}
+
+	}
+
 	public Place(String photoPlace, double economicResources, String name, String department,
 			double area) {
 
@@ -37,18 +49,10 @@ public class Place {
 		return photoPlace;
 	}
 
-	/**
-	 * 
-	 * @param photoPlace
-	 */
 	public void setPhotoPlace(String photoPlace) {
 		this.photoPlace = photoPlace;
 	}
 
-	/**
-	 * 
-	 * @param name
-	 */
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -57,10 +61,6 @@ public class Place {
 		return name;
 	}
 
-	/**
-	 * 
-	 * @param department
-	 */
 	public void setDepartment(String department) {
 		this.department = department;
 	}
@@ -69,10 +69,6 @@ public class Place {
 		return department;
 	}
 
-	/**
-	 * 
-	 * @param area
-	 */
 	public void setArea(double area) {
 		this.area = area;
 	}
@@ -81,10 +77,6 @@ public class Place {
 		return area;
 	}
 
-	/**
-	 * 
-	 * @param economicResources
-	 */
 	public void setEconomicResources(double economicResources) {
 		this.economicResources = economicResources;
 	}
